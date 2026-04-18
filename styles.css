@@ -149,22 +149,48 @@ header nav a:hover {
 
 .hero-stats {
     display: flex;
-    gap:40px;
-    justify-content: space-around;
+    gap: 44px;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
+    margin-top: 8px;
 }
 
 .hero-stats li {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 10px;
+    min-width: 120px;
+}
+
+.hero-stats strong {
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 800;
+    color: var(--primary);
 }
 
 .hero-stats span {
-    font-size: 14px;
+    font-size: 0;
     color: var(--gray);
+    line-height: 1.2;
+}
 
-} 
+.hero-stats li:nth-child(1) span::after {
+    content: "Clientes Felizes";
+}
+
+.hero-stats li:nth-child(2) span::after {
+    content: "Avalia\00E7\00E3o \2B50";
+}
+
+.hero-stats li:nth-child(3) span::after {
+    content: "Entrega Media";
+}
+
+.hero-stats span::after {
+    font-size: 14px;
+}
 
 .cardapio {
     padding: 80px 5%;
@@ -374,6 +400,10 @@ header nav a:hover {
     }
 
     .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
         justify-content: center;
     }
 
